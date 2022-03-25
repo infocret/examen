@@ -25,11 +25,13 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 
-
-
-
-
-
 Route::resource('users', 'userController');
 
 Route::resource('roles', 'roleController');
+
+Route::resource('mensajes', 'mensajeController');
+
+Route::get('apimsge','mensajeController@getmsg');
+
+
+Route::get('/info',['as' => 'mensaje.info', 'uses'=>'mensajeController@info']); 

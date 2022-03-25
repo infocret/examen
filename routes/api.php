@@ -19,11 +19,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 
-
-
-
-
-
 Route::resource('users', 'userAPIController');
 
 Route::resource('roles', 'roleAPIController');
+
+//Route::resource('mensajes', 'mensajeAPIController');
+
+Route::get('apimsg','mensajeAPIController@getmsg');
